@@ -3,7 +3,12 @@ This project generates an AI-bot that plays Starcraft II at a specified difficul
 
 Requirements:
 
-Python3.6 -> note that Python3.7 is not currently compatible with tensorflow, and has existing websocket bugs.
+SOFTWARE:
+Starcraft II Client
+Starcraft II maps (this project currently uses CyberForestLE.SC2Map from Ladder2019Season1)
+
+PYTHON PACKAGES:
+Python3.6 -> note that Python3.7 is not currently compatible with tensorflow, and has existing websocket issues.
 python-sc2 -> note that this is not an equivalent version to DeepMind's sc2 API.
 tensorflow
 keras
