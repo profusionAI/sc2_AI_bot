@@ -9,7 +9,7 @@ Starcraft II maps (this project currently uses CyberForestLE.SC2Map from Ladder2
 
 PYTHON PACKAGES:
 Python3.6 -> note that Python3.7 is not currently compatible with tensorflow, and has existing websocket issues.
-python-sc2 -> note that this is not an equivalent version to DeepMind's sc2 API.
+python-sc2 -> note that python-sc2 is not equivalent to DeepMind's pysc2 API.
 tensorflow
 keras
 numpy
