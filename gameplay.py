@@ -67,7 +67,7 @@ class ProfusionAI_Bot(sc2.BotAI):
         print('--- on_end called ---')
         print(game_result, self.use_model)
         
-        # Save training data if a victory occurs
+        # Save training data if a game result is a victory
         if game_result == Result.Victory:
             np.save("train_data/{}.npy".format(str(int(time.time()))), np.array(self.train_data))
         
