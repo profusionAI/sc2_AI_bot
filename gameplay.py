@@ -66,10 +66,17 @@ class ProfusionAI_Bot(sc2.BotAI):
     def on_end(self, game_result):
         print('--- on_end called ---')
         print(game_result, self.use_model)
-
-        if self.use_model:
-            with open("gameout-model-vs-easy.txt","a") as f:
-                f.write("Model {} - {}\n".format(game_result, int(time.time())))
+        
+        # Save training data if a victory occurs
+        if game_result == Result.Victory:
+            np.save("train_data/{}.npy".format(str(int(time.time()))), np.array(self.train_data))
+        
+        # Compare model vs. random
+        with open("log.txt","a") as f:
+            if self.use_model:
+                f.write("Model {}\n".format(game_result))
+            else:
+                f.write("Random {}\n".format(game_result))
 
     async def on_step(self, iteration):
 
